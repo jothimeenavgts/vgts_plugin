@@ -25,12 +25,14 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 33
+namespace "vgts.plugin.vgts_plugin_example"
+    compileSdkVersion 35
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
+targetSdkVersion 35
         minSdkVersion 21
     }
 }
