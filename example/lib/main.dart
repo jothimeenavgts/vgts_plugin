@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
 
+import 'package:flutter/material.dart';
 import 'package:vgts_plugin/vgts_plugin.dart';
 import 'package:vgts_plugin_example/add_company_basicinfo.dart';
 import 'package:vgts_plugin_example/app_model.dart';

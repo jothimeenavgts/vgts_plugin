@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath 'com.android.tools.build:gradle:8.1.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -25,15 +25,23 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
-namespace "vgts.plugin.vgts_plugin_example"
+namespace "vgts.plugin.vgts_plugin"
     compileSdkVersion 35
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
     defaultConfig {
-targetSdkVersion 35
+        targetSdkVersion 35
         minSdkVersion 21
+    }
+compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlin {
+        jvmToolchain(17)
     }
 }
 
